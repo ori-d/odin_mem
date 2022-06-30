@@ -1,0 +1,3 @@
+[submodule "extern/mi-malloc"]
+	path = extern/mi-malloc
+	url = https://github.com/microsoft/mimalloc.git
