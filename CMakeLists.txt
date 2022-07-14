@@ -10,3 +10,9 @@ target_include_directories (odin_memory PRIVATE "include/")
 target_link_libraries ("odin_memory" PRIVATE mi::malloc)
 
 add_library (odin::memory ALIAS odin_memory)
+
+install (TARGETS "odin_memory"
+         EXPORT "odin_memory"
+         DESTINATION ${CMAKE_INSTALL_LIBDIR} LIBRARY)
+install (FILES "include/odin/memory/memory.h"
+         DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/odin/memory/")
